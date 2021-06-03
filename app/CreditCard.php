@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use App\Services\CreditCardService;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class CreditCard extends Model
+class CreditCard
 {
-    use HasFactory;
     private $number;
 
     public function setNumber(string $number){

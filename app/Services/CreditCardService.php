@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Interfaces\CreditCardInterface;
 
-class CreditCardService implements CreditCardInterface
+class CreditCardService
 {
 
     public static function maskNumber(string $number)

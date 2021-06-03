@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\CreditCard;
 use App\Http\Requests\GetMaskedNumberRequest;
-use App\Models\CreditCard;
-use Illuminate\Http\Request;
 
 class CreditCardMaskController extends Controller
 {
