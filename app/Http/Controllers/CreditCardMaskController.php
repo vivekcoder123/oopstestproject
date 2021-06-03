@@ -8,17 +8,17 @@ use Illuminate\Http\Request;
 
 class CreditCardMaskController extends Controller
 {
+    private $creditCard;
     public function __construct()
     {
-
+        $this->creditCard = new CreditCard();
     }
 
     public function maskNumber(GetMaskedNumberRequest $request){
 
         $number = $request->number;
-        $creditCard = new CreditCard();
-        $creditCard->setNumber($number);
-        $maskedNumber = $creditCard->getNumber();
+        $this->creditCard->setNumber($number);
+        $maskedNumber = $this->creditCard->getNumber();
         return $maskedNumber;
 
     }
